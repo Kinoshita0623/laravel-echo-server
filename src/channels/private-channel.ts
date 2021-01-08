@@ -28,7 +28,7 @@ export class PrivateChannel {
         };
 
         if (this.options.devMode) {
-            Log.info(`[${new Date().toISOString()}] - Sending auth request to: ${options.url}\n`);
+            Log.info(`[${new Date().toISOString()}] - 認証リクエスト中: ${options.url}\n, ${options.headers}`);
         }
 
         return this.serverRequest(socket, options);

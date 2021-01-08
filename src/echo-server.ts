@@ -216,6 +216,7 @@ export class EchoServer {
      */
     onSubscribe(socket: any): void {
         socket.on('subscribe', data => {
+            Log.info(`subscribe:${data}`);
             this.channel.join(socket, data);
         });
     }
